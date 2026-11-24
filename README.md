@@ -16,7 +16,6 @@ py -m venv .venv
 python -m pip install -r requirements.txt
 python app.py
 ```
-Open http://127.0.0.1:5000
 
 ## API endpoints
 
@@ -24,5 +23,3 @@ Open http://127.0.0.1:5000
 |---|---|---|
 | GET | `/api/coffees` | Get coffee items and vote totals |
 | POST | `/api/coffees/<id>/vote` | Add one vote to a coffee item |
-
-The SQLite database file `coffee_votes.db` is created automatically when the app starts. Do not upload the `.venv` folder to GitHub.
