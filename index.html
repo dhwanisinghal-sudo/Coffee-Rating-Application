@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Great Coffee | Rating App</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<main class="page">
+  <nav class="topbar"><a class="brand" href="/"><span class="brand-icon">☕</span><span>the great <b>coffee.</b></span></a><span class="top-note"><i></i> COMMUNITY RATING BOARD</span></nav>
+  <header class="hero">
+    <div class="hero-copy"><p class="eyebrow">GOOD COFFEE. GOOD COMPANY.</p><h1>Find your next<br><em>favourite cup.</em></h1><p class="hero-text">Every coffee has a story. Explore the collection and give your favourite a vote. Your choice helps the community pick its next brew.</p><div class="hero-stats"><div><strong id="totalVotes">0</strong><span>COMMUNITY VOTES</span></div><div class="stat-divider"></div><div><strong id="coffeeCount">7</strong><span>COFFEE PICKS</span></div></div></div>
+    <div class="hero-art"><div class="coffee-ring"></div><div class="coffee-cup"><div class="cup-coffee"></div><div class="cup-handle"></div><span>☕</span></div><div class="art-label">A MOMENT<br>BREWED WELL</div><span class="art-star">✳</span></div>
+  </header>
+  <section class="collection">
+    <div class="section-head"><div><p class="eyebrow">THE COMMUNITY MENU</p><h2>Choose your brew<span>.</span></h2></div><div class="sort-label">VOTE FOR YOUR FAVOURITE <span>↓</span></div></div>
+    <div id="coffeeGrid" class="coffee-grid"><div class="loading">Brewing the menu...</div></div>
+    <p class="footnote">Your vote is saved in the database and stays counted after refreshing the page.</p>
+  </section>
+  <footer><span>THE GREAT COFFEE <b>✦</b></span><span>Made for coffee people, everywhere.</span></footer>
+</main>
+<div id="toast" class="toast" role="status"></div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body></html>
